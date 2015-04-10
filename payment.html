@@ -1,0 +1,198 @@
+<DOCTYPE! html>
+ 
+<html>
+    <head>
+    <title> Payment </title>
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="css/custom.css" rel="stylesheet"> 
+    
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default">
+        <div class="container">
+            <h1>Payment (1/2)</h1>
+        </div>
+        </nav>
+    <div class="container-fluid">
+        <div class='row'>
+            <div class="col-md-8">
+          <span id="totalAmount"></span>
+                </div>
+             <div class="col-md-4">
+            <button type="button" id="help" class="btn btn-default">Help</button>
+                </div>
+       </div>
+        </div>
+        
+        <div class="container-fluid">
+        
+      
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Select One of the following cards:
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+      <div class="row">
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="images/pioneer-generation-card.jpg">
+      <div class="caption">
+        <h4>Pioneer Generation Card</h4>
+        <p> 15% off total bill</p>
+        <p id="pioneerPrice"></p>
+        <p><a href="#collapseTwo" aria-controls="collapseTwo" data-parent="#accordion" aria-expanded="false" aria-controls="scan" data-toggle="collapse" class="btn btn-primary" role="button">Select</a></p>
+      </div>
+    </div>
+  </div>
+    
+     <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="images/membership.png">
+      <div class="caption">
+        <h4>Supermarket X Card</h4>
+        <p> 5% off total bill + 200 points</p>
+        <p id="membershipPrice"></p>
+        <p><a href="#collapseTwo" aria-controls="collapseTwo" data-parent="#accordion" aria-expanded="false" aria-controls="scan" data-toggle="collapse" class="btn btn-primary" role="button">Select</a></p>
+      </div>
+    </div>
+  </div>
+    
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="images/passion.jpg">
+      <div class="caption">
+        <h3>Passion Card</h3>
+        <p> 10% off total bill</p>
+          <p id="passionPrice"></p>
+        <p><a href="#collapseTwo" aria-controls="collapseTwo" data-parent="#accordion" aria-expanded="false" aria-controls="scan" data-toggle="collapse" class="btn btn-primary" role="button">Select</a></p>
+      </div>
+    </div>
+  </div>
+        
+        <div class="col-sm-4 col-md-2">
+      <div class="caption">
+        <h4>None</h4>
+        <p> Proceed to Payment</p>
+        <p><a href="#collapseThree" aria-controls="collapseThree" data-parent="#accordion" aria-expanded="false" aria-controls="scan" data-toggle="collapse" class="btn btn-primary" role="button">Select</a></p>
+      </div>
+  </div>
+       </div><!-----end of row-------------------->
+      </div>
+    </div>
+  </div>
+            </div>
+  
+        <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Scan Your Card
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body"> 
+            <div id="row">
+                 <div class="col-sm-6 col-md-4">
+                     <img src="images/cardreader.jpg">
+                     <div class="caption"><h4>Step 1</h4></div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                     <img src="images/cardreader2.jpg">
+                     <div class="caption"><h4>Step 2</h4></div>
+                </div>
+                <a href="#collapseThree" aria-controls="collapseThree" data-parent="#accordion" aria-expanded="false" aria-controls="scan" data-toggle="collapse" class="btn btn-primary" role="button">Done</a>
+                </div>   
+      </div>
+    </div>
+  </div>
+        
+        
+         <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+         Select Payment Method
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+         <div class="row">
+                    <div class="col-sm-4 col-md-2">
+                        <div class="thumbnail">
+                            <img src="images/cash.jpg">
+                            <div class="caption">
+                                <h4>Cash</h4>
+                                <p><a href="payment2.html" class="btn btn-primary" role="button">Select</a></p>
+                            </div>
+                            </div>
+                        </div>
+    
+                    <div class="col-sm-4 col-md-2">
+                        <div class="thumbnail">
+                            <img src="images/nets.jpg">
+                            <div class="caption">
+                                <h4>Nets</h4>
+                                <p><a href="payment2.html" class="btn btn-primary" role="button">Select</a></p>
+                            </div>
+                            </div>
+                        </div>
+
+                    <div class="col-sm-4 col-md-2">
+                        <div class="thumbnail">
+                            <img src="images/credit.jpg">
+                            <div class="caption">
+                                <h4>Credit/Debit Card</h4>
+                                <p><a href="paymentCredit.html" class="btn btn-primary" role="button">Select</a></p>
+                            </div>
+                            </div>
+                        </div>
+
+                          <div class="col-sm-4 col-md-2">
+                        <div class="thumbnail">
+                            <img src="images/cashcard.jpg">
+                            <div class="caption">
+                                <h4>Cash Card</h4>
+                                <p><a href="payment2.html" class="btn btn-primary" role="button">Select</a></p>
+                            </div>
+                            </div>
+                        </div>
+                     <div class="col-sm-4 col-md-2">
+                        <div class="thumbnail">
+                            <img src="images/ezlink.jpg">
+                            <div class="caption">
+                                <h4>EZ link Card</h4>
+                                <p><a href="payment2.html" class="btn btn-primary" role="button">Select</a></p>
+                            </div>
+                            </div>
+                        </div>
+         
+                </div><!-----end of row-------->
+      </div>
+    </div>
+  </div>
+  </div>
+    
+
+    
+    
+    
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    </body>
+
+</html>
