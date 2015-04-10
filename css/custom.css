@@ -6,3 +6,9 @@ h1{
 #help{
     color:#FF0000;
 }
+
+#help-button{
+    text-align: #center;
+    font-size: 28px;
+    margin-top: 7px;
+}

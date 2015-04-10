@@ -1,0 +1,150 @@
+<DOCTYPE! html>
+ 
+<html>
+    <head>
+    <title> Weigh </title>
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="../css/custom.css" rel="stylesheet"> 
+    
+    </head>
+
+    <body>
+    	<nav class="navbar navbar-default">
+        <div class="container">
+            <h1 style="display: inline;" class="col-md-10">Weigh the fresh foods!</h1>
+            <a style="display: inline;" id="help-button" type="button" class="btn btn-danger col-md-2">Help</a>
+        </div>
+        </nav>
+
+        <div class="container">          
+		  <table class="table table-bordered">
+		    <thead>
+		      <tr>
+		        <th class="col-md-6">Item Name</th>
+		        <th class="col-md-2">Amount (per kg)</th>
+		        <th class="col-md-2">Weight (kg)</th>
+		        <th class="col-md-2">Price ($)</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td id="item1">
+		        <select id="item-list1" class="col-md-12" onchange="selectItem(1)">
+				</select>
+		        </td>
+		        <td id="amount1">-</td>
+		        <td id="weight1">-</td>
+		        <td id="price1">-</td>
+		      </tr>
+		      <tr>
+		        <td id="item2">
+		        <select id="item-list2" class="col-md-12" onchange="selectItem(2)">
+				</select>
+		        </td>
+		        <td id="amount2">-</td>
+		        <td id="weight2">-</td>
+		        <td id="price2">-</td>
+		      </tr>
+		      <tr>
+		        <td id="item3">
+		        <select id="item-list3" class="col-md-12" onchange="selectItem(3)">
+				</select>
+		        </td>
+		        <td id="amount3">-</td>
+		        <td id="weight3">-</td>
+		        <td id="price3">-</td>
+		      </tr>
+		      <tr>
+		        <td id="item4">
+		        <select id="item-list4" class="col-md-12" onchange="selectItem(4)">
+				</select>
+		        </td>
+		        <td id="amount4">-</td>
+		        <td id="weight4">-</td>
+		        <td id="price4">-</td>
+		      </tr>
+		      <tr>
+		        <td id="item5">
+		        <select id="item-list5" class="col-md-12" onchange="selectItem(5)">
+				</select>
+		        </td>
+		        <td id="amount5">-</td>
+		        <td id="weight5">-</td>
+		        <td id="price5">-</td>
+		      </tr>
+		      <tr>
+		        <td id="item6">
+		        <select id="item-list6" class="col-md-12" onchange="selectItem(6)">
+				</select>
+		        </td>
+		        <td id="amount6">-</td>
+		        <td id="weight6">-</td>
+		        <td id="price6">-</td>
+		      </tr>
+		      <tr>
+		        <td id="item7">
+		        <select id="item-list7" class="col-md-12" onchange="selectItem(7)">
+				</select>
+		        </td>
+		        <td id="amount7">-</td>
+		        <td id="weight7">-</td>
+		        <td id="price7">-</td>
+		      </tr>
+		      <tr>
+		        <td id="item8">
+		        <select id="item-list8" class="col-md-12" onchange="selectItem(8)">
+				</select>
+		        </td>
+		        <td id="amount8">-</td>
+		        <td id="weight8">-</td>
+		        <td id="price8">-</td>
+		      </tr>
+		      <tr>
+		        <td id="item9">
+		        <select id="item-list9" class="col-md-12" onchange="selectItem(9)">
+				</select>
+		        </td>
+		        <td id="amount9">-</td>
+		        <td id="weight9">-</td>
+		        <td id="price9">-</td>
+		      </tr>
+		      <tr>
+		        <td id="item10">
+		        <select id="item-list10" class="col-md-12" onchange="selectItem(10)">
+				</select>
+		        </td>
+		        <td id="amount10">-</td>
+		        <td id="weight10">-</td>
+		        <td id="price10">-</td>
+		      </tr>
+		    </tbody>
+		  </table>
+		</div>
+
+		<div class="container">
+			<button class="btn btn-primary col-md-5" style="display: inline;">Add more Item(s)</button>
+			<h4 class="col-md-5" style="text-align: right; display: inline;"><strong>TOTAL PRICE (SGD)</strong></h4>
+			<h4 id="total" class="col-md-2" style="text-align: left; display: inline; color: red;"><strong>-</strong></h4>
+		</div>
+		<br>
+
+		<div class="container">
+			<h3 class="col-md-6"></h3>
+			<button class="btn btn-success col-md-3" style="display: inline;">Proceed to Scanning</button>
+			<h4 class="col-md-1" style="display: inline; text-align: center;"><i>OR</i></h4>
+			<button class="btn btn-success col-md-2" style="display: inline;">Proceed to Payment</button>
+		</div>
+
+	    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+	    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="../js/weigh.js"></script>
+	    <script language="javascript">
+	      populatedropdown("item-list");
+	  </script>
+    </body>
+
+</html>
