@@ -29,7 +29,7 @@
 		        <th class="col-md-2">Price ($)</th>
 		      </tr>
 		    </thead>
-		    <tbody>
+		    <tbody id="table-body">
 		      <tr>
 		        <td id="item1">
 		        <select id="item-list1" class="col-md-12" onchange="selectItem(1)">
@@ -125,7 +125,7 @@
 		</div>
 
 		<div class="container">
-			<button class="btn btn-primary col-md-5" style="display: inline;">Add more Item(s)</button>
+			<button class="btn btn-primary col-md-5" style="display: inline;" onclick="addItem()">Add more Item(s)</button>
 			<h4 class="col-md-5" style="text-align: right; display: inline;"><strong>TOTAL PRICE (SGD)</strong></h4>
 			<h4 id="total" class="col-md-2" style="text-align: left; display: inline; color: red;"><strong>-</strong></h4>
 		</div>

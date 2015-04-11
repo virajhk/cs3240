@@ -62,3 +62,17 @@ function selectItem(selectId) {
         priceElement.innerHTML = "-";
     }
 }
+
+function addItem() {
+    rows++;
+    var id = "item-list" + rows.toString();
+    var tdId = "item" + rows.toString();
+    var appendString = "<tr><td id='" + tdId + "'><select id='" + id + "' class='col-md-12' onchange='selectItem(" + rows + ")'></select></td><td id='amount"+ rows.toString() + "'>-</td><td id='weight" + rows.toString() + "'>-</td><td id='price" + rows.toString() + "'>-</td></tr>";
+    $('#table-body').append(appendString);
+
+    var list = document.getElementById(id);
+    list.options[0] = new Option('Select Item', '-1');
+
+    for (var i=1; i<items.length+1; i++)
+        list.options[i]=new Option(items[i-1].name, i-1);
+}
