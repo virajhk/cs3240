@@ -21,6 +21,22 @@ h1{
     margin-right: auto;
 }
 
-#sound-selection {
+.sound-selection {
     margin-top: 80px;
+}
+
+.language-selection {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#welcome-message {
+    margin-top: 150px;
+    font-size: 5em;
+}
+
+#language-message {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2em;
 }
