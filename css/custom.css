@@ -2,7 +2,6 @@ h1{
     text-align: center;
 }
 
-
 #help{
     color:#FF0000;
 }
@@ -11,4 +10,17 @@ h1{
     text-align: #center;
     font-size: 28px;
     margin-top: 7px;
+}
+
+#speaker-img {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin-top: 80px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sound-selection {
+    margin-top: 80px;
 }
