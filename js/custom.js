@@ -5,7 +5,7 @@ var passion=x-(x*(10/100));
 
 
 
-$("#totalAmount").append("<h2> Total Amount: $"+x+"</h2>");
+$("#totalAmount").append("<h3> Total Amount: $"+x+"</h3>");
 
 $("#pioneerPrice").append("Price after Discount: $"+pioneer);
 $("#membershipPrice").append("Price after Discount: $"+membership);
@@ -18,4 +18,31 @@ $(function() {
     });
   });
 
+
+function changePprice(){
+
+	x=pioneer;
+	$("#totalAmount").append("<h2> Final Amount: $"+x+"</h2>");
+
+}
+
+function changePaprice(){
+
+	x=passion;
+	$("#totalAmount").append("<h2> Final Amount: $"+x+"</h2>");
+
+}
+
+function changeMprice(){
+
+	x=membership;
+	$("#totalAmount").append("<h2> Final Amount: $"+x+"</h2>");
+
+}
+
+function changeNprice(){
+
+	$("#totalAmount").append("<h2> Final Amount: $"+x+"</h2>");
+
+}
 
