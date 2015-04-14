@@ -11,3 +11,9 @@ function goToScan() {
 	var newLocation = location.substr(0, index);
 	document.location.href = newLocation + "/views/scan.html";
 }
+
+var sound = false;
+
+function setSoundOn() {
+	localStorage.setItem('sound', true);
+}
