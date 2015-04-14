@@ -52,10 +52,13 @@ function selectItem(selectId) {
 
         totalPrice += price;
 
+        localStorage.totalPrice = totalPrice;
+
         totalField.innerHTML = totalPrice.toFixed(2);
     } else {
         var subtract = priceElement.innerHTML;
         totalPrice -= subtract;
+        localStorage.totalPrice = totalPrice;
         totalField.innerHTML = totalPrice.toFixed(2);
         element.innerHTML = "-";
         weightElement.innerHTML = "-";
