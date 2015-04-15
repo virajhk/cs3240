@@ -141,11 +141,25 @@
             <h3 class="col-md-6"></h3>
             <a href="../payment.html" class="btn btn-success col-md-3 col-md-offset-3" style="display: inline;">Proceed to Payment</a>
         </div>
+		
+		<div id="sound-content">
+					
+		</div>
 
         <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="../js/bootstrap.min.js"></script>
         <script type="text/javascript" src="../js/scan.js"></script>
+		
+		<script src="../js/main.js"></script>
+	
+		<script>
+			window.onload = function(){
+				if (localStorage.getItem('sound') == 'true')
+					$('#sound-content').append("<audio style='display:none;' autoplay='true' src='../audio/scan.mp3'>");
+			}
+		</script>
+	
     </body>
 
 </html>

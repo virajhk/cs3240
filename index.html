@@ -44,6 +44,9 @@
 				<h1>A moment please :)</h1>
 				<p>Do you have any items that <a>need to be weighed?</a></p>
 				<p><b>OR</b> Do any of your items <a>not have a barcode</a>?</p>
+				<div id="sound-content">
+					
+				</div>
 			</div>
 		</div>
 	</div>
@@ -68,6 +71,13 @@
     <script src="js/bootstrap.min.js"></script>
 	
 	<script src="js/main.js"></script>
+	
+	<script>
+		window.onload = function(){
+			if (localStorage.getItem('sound') == 'true')
+				$('#sound-content').append("<audio style='display:none;' autoplay='true' src='audio/weigh-or-scan.mp3'>");
+		}
+	</script>
 
 </body>
 

@@ -33,7 +33,7 @@ html,body {
 	top:45%;
 	left:0;
 	background-color:blue;
-	background-image:url("http://wallpaperscraft.com/image/79837/5111x3407.jpg");
+	background-image:url("../images/5111x3407.jpg");
 	background-size:100% auto;
     background-repeat: no-repeat;
 	overflow:hidden;
@@ -43,7 +43,7 @@ html,body {
 	top:45%;
 	left:50%;
 	background-color:red;
-    background-image:url("https://thesplodge.files.wordpress.com/2011/08/self-checkout-1.jpg");
+    background-image:url("../images/self-checkout-1.jpg");
 	background-size:100% auto;
     background-repeat: no-repeat;
 	overflow:hidden;

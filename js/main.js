@@ -15,5 +15,5 @@ function goToScan() {
 var sound = false;
 
 function setSoundOn() {
-	localStorage.setItem('sound', true);
+	localStorage.setItem('sound', 'true');
 }
