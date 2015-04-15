@@ -1,9 +1,12 @@
-var totalPrice = parseFloat(localStorage.totalPrice);
 var scanPrice = 0;
-console.log(totalPrice);
 var selectIdStr = 1;
 var prevSelectIdStr = 1;
 var rows = 10;
+var scanned = 0;
+var rescanned = 0;
+var undone = 0;
+var itemNumber = 0;
+
 var items = [
 {
     name: "Item 1",
@@ -63,7 +66,8 @@ function scan() {
 
     var totalField = document.getElementById('total');
 
-    var itemRandom = (Math.random()*10).toFixed(0);
+    var itemRandom = Math.floor((Math.random()*10));
+    itemNumber = itemRandom;
 
     var amount = items[itemRandom].amount.toFixed(2);
     var price = amount * Math.floor(quantity);
@@ -77,16 +81,20 @@ function scan() {
     priceElement.innerHTML = price.toFixed(2);
 
     scanPrice += price;
+    localStorage.scanPrice = scanPrice;
 
     totalField.innerHTML = scanPrice.toFixed(2);
 
     prevSelectIdStr = selectIdStr;
 
     selectIdStr++;
+
+    scanned = 1;
+    rescanned = 0;
+    undone = 0;
 }
 
 function rescan() {
-
     var amountField = "amount"+prevSelectIdStr;
     var element = document.getElementById(amountField);
     var amount = parseFloat(element.innerHTML);
@@ -108,12 +116,98 @@ function rescan() {
     priceElement.innerHTML = price.toFixed(2);
 
     scanPrice += amount;
+    localStorage.scanPrice = scanPrice;
 
     totalField.innerHTML = scanPrice.toFixed(2);
+
+    scanned = 0;
+    rescanned = 1;
+    undone = 0;
 }
 
 function undo() {
-     
+    if (scanned == 1) {
+        if (confirm('Do you want to undo the latest scanned item?')) {
+            selectIdStr--;
+            var textField = "item-list"+selectIdStr;
+            var itemElement = document.getElementById(textField);
+
+            var amountField = "amount"+selectIdStr;
+            var element = document.getElementById(amountField);
+
+            var quantity = 1;
+            var quantityField = "quantity"+selectIdStr;
+            var quantityElement = document.getElementById(quantityField);
+
+            var priceField = "price"+selectIdStr;
+            var priceElement = document.getElementById(priceField);
+
+            var totalField = document.getElementById('total');
+
+            var itemRandom = itemNumber;
+
+            var amount = items[itemRandom].amount.toFixed(2);
+            var price = amount * Math.floor(quantity);
+
+            itemElement.value = "";
+
+            element.innerHTML = "-";
+            
+            quantityElement.innerHTML = "-";
+
+            priceElement.innerHTML = "-";
+
+            scanPrice -= price;
+            localStorage.scanPrice = scanPrice;
+
+            if (scanPrice == 0)
+                totalField.innerHTML = "-";
+            else
+                totalField.innerHTML = scanPrice.toFixed(2);
+
+            prevSelectIdStr = selectIdStr;
+
+            scanned = 0;
+            rescanned = 0;
+            undone = 1;
+        }
+    } else if (rescanned == 1) {
+        if (confirm('Do you want to undo the latest scanned item?')) {
+            var amountField = "amount"+prevSelectIdStr;
+            var element = document.getElementById(amountField);
+            var amount = parseFloat(element.innerHTML);
+
+            var quantityField = "quantity"+prevSelectIdStr;
+            var quantityElement = document.getElementById(quantityField);
+            var quantity = quantityElement.innerHTML;
+            quantity--;
+
+            var priceField = "price"+prevSelectIdStr;
+            var priceElement = document.getElementById(priceField);
+
+            var totalField = document.getElementById('total');
+
+            var price = parseFloat(priceElement.innerHTML) - amount;
+            
+            quantityElement.innerHTML = Math.floor(quantity);
+
+            priceElement.innerHTML = price.toFixed(2);
+
+            scanPrice -= amount;
+            localStorage.scanPrice = scanPrice;
+
+            totalField.innerHTML = scanPrice.toFixed(2);
+
+            scanned = 0;
+            rescanned = 0;
+            undone = 1;
+        }
+    } else {
+        if (selectIdStr == 1)
+            alert('Please scan an item first!');  
+        else
+            alert('You can only undo the latest action!');    
+    }
 }
 
 function addItem() {

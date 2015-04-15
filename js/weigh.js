@@ -1,5 +1,5 @@
 var rows = 10;
-var totalPrice = 0;
+var weighPrice = 0;
 var items = [
 {
     name: "Item 1",
@@ -50,16 +50,16 @@ function selectItem(selectId) {
 
         priceElement.innerHTML = price.toFixed(2);
 
-        totalPrice += price;
+        weighPrice += price;
 
-        localStorage.totalPrice = totalPrice;
+        localStorage.weighPrice = weighPrice;
 
-        totalField.innerHTML = totalPrice.toFixed(2);
+        totalField.innerHTML = weighPrice.toFixed(2);
     } else {
         var subtract = priceElement.innerHTML;
-        totalPrice -= subtract;
-        localStorage.totalPrice = totalPrice;
-        totalField.innerHTML = totalPrice.toFixed(2);
+        weighPrice -= subtract;
+        localStorage.weighPrice = weighPrice;
+        totalField.innerHTML = weighPrice.toFixed(2);
         element.innerHTML = "-";
         weightElement.innerHTML = "-";
         priceElement.innerHTML = "-";
