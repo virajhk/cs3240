@@ -1,15 +1,17 @@
-var x=120;
+var totalAmount = parseFloat(localStorage.scanPrice) + parseFloat(localStorage.weighPrice);
+var x=totalAmount;
 var pioneer=x-(x*(15/100));
 var membership=x-(x*(5/100));
 var passion=x-(x*(10/100));
 
 
 
-$("#totalAmount").append("<h3> Total Amount: $"+x+"</h3>");
+$("#totalAmount").append("<h3> Total Amount: $"+x.toFixed(2)+"</h3>");
 
-$("#pioneerPrice").append("Price after Discount: $"+pioneer);
-$("#membershipPrice").append("Price after Discount: $"+membership);
-$("#passionPrice").append("Price after Discount: $"+passion);
+$("#pioneerPrice").append("Price after Discount: $"+pioneer.toFixed(2));
+$("#membershipPrice").append("Price after Discount: $"+membership.toFixed(2));
+$("#passionPrice").append("Price after Discount: $"+passion.toFixed(2));
+$("#noDiscount").append("Price without Discount: $"+x.toFixed(2));
 
 
 $(function() {
@@ -22,27 +24,27 @@ $(function() {
 function changePprice(){
 
 	x=pioneer;
-	$("#totalAmount").append("<h2> Final Amount: $"+x+"</h2>");
+	$("#totalAmount").append("<h2> Final Amount: $"+x.toFixed(2)+"</h2>");
 
 }
 
 function changePaprice(){
 
 	x=passion;
-	$("#totalAmount").append("<h2> Final Amount: $"+x+"</h2>");
+	$("#totalAmount").append("<h2> Final Amount: $"+x.toFixed(2)+"</h2>");
 
 }
 
 function changeMprice(){
 
 	x=membership;
-	$("#totalAmount").append("<h2> Final Amount: $"+x+"</h2>");
+	$("#totalAmount").append("<h2> Final Amount: $"+x.toFixed(2)+"</h2>");
 
 }
 
 function changeNprice(){
 
-	$("#totalAmount").append("<h2> Final Amount: $"+x+"</h2>");
+	$("#totalAmount").append("<h2> Final Amount: $"+x.toFixed(2)+"</h2>");
 
 }
 
