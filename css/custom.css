@@ -33,10 +33,12 @@ h1{
 #welcome-message {
     margin-top: 150px;
     font-size: 5em;
+    color: white;
 }
 
 #language-message {
     text-align: center;
     margin-top: 30px;
     font-size: 2em;
+    color: #DDBFE5;
 }
