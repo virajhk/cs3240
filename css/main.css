@@ -27,10 +27,8 @@ html,body {
 #top {
 	top:0;
 	left:0;
-	background-color:grey;
 }
 #bottom-right {
-	top:45%;
 	left:0;
 	background-color:blue;
 	background-image:url("http://wallpaperscraft.com/image/79837/5111x3407.jpg");
@@ -40,7 +38,6 @@ html,body {
 }
 
 #bottom-left {
-	top:45%;
 	left:50%;
 	background-color:red;
     background-image:url("https://thesplodge.files.wordpress.com/2011/08/self-checkout-1.jpg");
@@ -55,7 +52,6 @@ html,body {
     height:10%;
     top:90%;
 	left:0;
-	background-color:grey;
 }
 
 .btn {
@@ -82,7 +78,6 @@ div h2 {
     margin-right: -50%;
     transform: translate(-50%, -50%) }
 
-h1,
 h2,
 h3,
 h4,

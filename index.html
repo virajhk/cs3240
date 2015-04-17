@@ -9,57 +9,38 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bare - Start Bootstrap Template</title>
+    <title>Self-Checkout Machine</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	
 	<link href="css/main.css" rel="stylesheet">
-	<!--<link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">-->
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    </style>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!--<link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">-->
 
 </head>
 
 <body>
 
-    <div id="top" class="half">
-		<div style="display: table; width: 100%; height: 100%; text-align: center;">
-			<div style="display: table-cell; vertical-align: middle;">
-				<h1>A moment please :)</h1>
-				<p>Do you have any items that <a>need to be weighed?</a></p>
-				<p><b>OR</b> Do any of your items <a>not have a barcode</a>?</p>
-			</div>
-		</div>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <h1 style="display: inline;" class="col-md-10">Do you need to weigh any items?</h1>
+            <a style="display: inline;" id="help-button" type="button" class="btn btn-danger col-md-2">Help</a>
+        </div>
+    </nav>
+    <div class="container">
+        <br>
+		<h3 style="text-align: center;">If you have any fresh foods without a barcode, please select <span style="color: green;">YES</span>!</h1>
 	</div>
-<div id="bottom-right" class="quarter" onclick="goToWeigh()">
-    <h2>Yes</h2>
-</div>
-<div id="bottom-left" class="quarter" onclick="goToScan()">
-    <h2>No</h2>
-</div>
-<div id="footer">
-    <div style="display: table; width: 100%; height: 100%; text-align: center;">
-	    <div style="display: table-cell; vertical-align: middle;">
-		    <button class="btn" type="button" onclick="alert('Calling for assistance!')">Click here if you require assistance</button>
-	    </div>
+    <div class="container" onclick="goToWeigh()">
+        <img class="col-md-8 center-block" height="300px" width="200px" src="images/yes_weigh.jpg">
+        <h1><a type="button" class="btn btn-success">Yes</a></h1>
     </div>
-</div>
+    <div id="bottom-left" class="quarter" onclick="goToScan()">
+        <h2>No</h2>
+    </div>
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery-1.11.2.min.js"></script>

@@ -35,54 +35,58 @@
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Select One of the following cards:
+          Do you have any of these promotion cards?
         </a>
       </h4>
     </div>
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
       <div class="row">
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-3">
     <div class="thumbnail">
       <img src="images/pioneer-generation-card.jpg">
       <div class="caption">
-        <h4>Pioneer Generation Card</h4>
-        <p> 15% off total bill</p>
-        <p id="pioneerPrice"></p>
-        <p><a onclick="changePprice()"id="pioneerTotal" href="#collapseTwo" aria-controls="collapseTwo" data-parent="#accordion" aria-expanded="false" aria-controls="scan" data-toggle="collapse" class="btn btn-primary" role="button">Select</a></p>
+        <h4 style="text-align: center;">Pioneer Generation Card</h4>
+        <p style="text-align: center;"> 15% off total bill</p>
+        <p style="text-align: center;"  id="pioneerPrice"></p>
+        <p><a onclick="changePprice()"id="pioneerTotal" href="#collapseTwo" aria-controls="collapseTwo" data-parent="#accordion" aria-expanded="false" aria-controls="scan" data-toggle="collapse" class="btn btn-primary center-block" role="button">Select</a></p>
       </div>
     </div>
   </div>
     
-     <div class="col-sm-6 col-md-4">
+     <div class="col-sm-6 col-md-3">
     <div class="thumbnail">
       <img src="images/membership.png">
       <div class="caption">
-        <h4>Supermarket X Card</h4>
-        <p> 5% off total bill + 200 points</p>
-        <p id="membershipPrice"></p>
-        <p><a onclick="changeMprice()" href="#collapseTwo" aria-controls="collapseTwo" data-parent="#accordion" aria-expanded="false" aria-controls="scan" data-toggle="collapse" class="btn btn-primary" role="button">Select</a></p>
+        <h4 style="text-align: center;">Supermarket X Card</h4>
+        <p style="text-align: center;"> 5% off total bill + 200 points</p>
+        <p style="text-align: center;" id="membershipPrice"></p>
+        <p><a onclick="changeMprice()" href="#collapseTwo" aria-controls="collapseTwo" data-parent="#accordion" aria-expanded="false" aria-controls="scan" data-toggle="collapse" class="btn btn-primary center-block" role="button">Select</a></p>
       </div>
     </div>
   </div>
     
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-3">
     <div class="thumbnail">
       <img src="images/passion.jpg">
       <div class="caption">
-        <h4>Passion Card</h4>
-        <p> 10% off total bill</p>
-          <p id="passionPrice"></p>
-        <p><a onclick="changePaprice()" href="#collapseTwo" aria-controls="collapseTwo" data-parent="#accordion" aria-expanded="false" aria-controls="scan" data-toggle="collapse" class="btn btn-primary" role="button">Select</a></p>
+        <h4 style="text-align: center;">Passion Card</h4>
+        <p style="text-align: center;"> 10% off total bill</p>
+          <p style="text-align: center;" id="passionPrice"></p>
+        <p><a onclick="changePaprice()" href="#collapseTwo" aria-controls="collapseTwo" data-parent="#accordion" aria-expanded="false" aria-controls="scan" data-toggle="collapse" class="btn btn-primary center-block" role="button">Select</a></p>
       </div>
     </div>
   </div>
         
-        <div class="col-sm-6 col-md-4 col-md-offset-4">
+        <div class="col-sm-6 col-md-3 ">
+      <div class="thumbnail">
+      <img src="images/no-card.png">
       <div class="caption">
-        <h4 style="text-align: center;">None</h4>
-        <p style="text-align: center;"> Proceed to Payment</p>
-        <p style="text-align: center;"><a onclick="changeNprice()" href="#collapseThree" aria-controls="collapseThree" data-parent="#accordion" aria-expanded="false" aria-controls="scan" data-toggle="collapse" class="btn btn-primary" role="button">Select</a></p>
+        <h4 style="text-align: center;">I don't have these!</h4>
+        <p style="text-align: center;"> No applicable discount.</p>
+        <p style="text-align: center;" id="noDiscount"></p>
+        <p style="text-align: center;"><a onclick="changeNprice()" href="#collapseThree" aria-controls="collapseThree" data-parent="#accordion" aria-expanded="false" aria-controls="scan" data-toggle="collapse" class="btn btn-primary center-block" role="button">Select</a></p>
+      </div>
       </div>
   </div>
        </div>
@@ -95,7 +99,7 @@
     <div class="panel-heading" role="tab" id="headingTwo">
       <h4 class="panel-title">
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Scan Your Card
+          Scan Your Promotion Card
         </a>
       </h4>
     </div>
