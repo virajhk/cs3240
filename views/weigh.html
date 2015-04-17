@@ -137,14 +137,27 @@
 			<h4 class="col-md-1" style="display: inline; text-align: center;"><i>OR</i></h4>
 			<a href="../payment.html" class="btn btn-success col-md-2" style="display: inline;">Proceed to Payment</a>
 		</div>
+		<div id="sound-content">
+					
+		</div>
 
 	    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
 	    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
 	    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 	    <script type="text/javascript" src="../js/weigh.js"></script>
 	    <script language="javascript">
-	      populatedropdown("item-list");
-	  </script>
+			populatedropdown("item-list");
+		</script>
+	  
+		<script src="../js/main.js"></script>
+		
+		<script>
+			window.onload = function(){
+				if (localStorage.getItem('sound') == 'true')
+					$('#sound-content').append("<audio style='display:none;' autoplay='true' src='../audio/weigh.mp3'>");
+			}
+		</script>
+	
     </body>
 
 </html>

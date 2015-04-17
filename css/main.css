@@ -31,7 +31,7 @@ html,body {
 #bottom-right {
 	left:0;
 	background-color:blue;
-	background-image:url("http://wallpaperscraft.com/image/79837/5111x3407.jpg");
+	background-image:url("../images/5111x3407.jpg");
 	background-size:100% auto;
     background-repeat: no-repeat;
 	overflow:hidden;
@@ -40,7 +40,7 @@ html,body {
 #bottom-left {
 	left:50%;
 	background-color:red;
-    background-image:url("https://thesplodge.files.wordpress.com/2011/08/self-checkout-1.jpg");
+    background-image:url("../images/self-checkout-1.jpg");
 	background-size:100% auto;
     background-repeat: no-repeat;
 	overflow:hidden;
