@@ -17,3 +17,7 @@ var sound = false;
 function setSoundOn() {
 	localStorage.setItem('sound', 'true');
 }
+
+function setSoundOff() {
+	localStorage.setItem('sound', 'false');
+}
