@@ -6,7 +6,7 @@ var scanned = 0;
 var rescanned = 0;
 var undone = 0;
 var itemNumber = 0;
-
+var scanStore = [];
 var items = [
 {
     name: "Item 1",
@@ -50,6 +50,33 @@ var items = [
 }
 ];
 
+if (localStorage.fromScan == 1) {
+    var storedItems = JSON.parse(localStorage.scanStore);
+
+    for (var i=1; i<=storedItems.length; i++) {
+
+        var selectIdStr = i.toString();
+        var selectedItem = "item-list"+selectIdStr;
+        document.getElementById(selectedItem).value = storedItems[i-1].selected;
+
+        var amountField = "amount"+selectIdStr;
+        document.getElementById(amountField).innerHTML = storedItems[i-1].amount;
+
+        var weight = Math.random();
+        var weightField = "quantity"+selectIdStr;
+        document.getElementById(weightField).innerHTML = storedItems[i-1].quantity;
+
+        var priceField = "price"+selectIdStr;
+        document.getElementById(priceField).innerHTML = storedItems[i-1].price;
+
+        document.getElementById('total').innerHTML = parseFloat(localStorage.scanPrice).toFixed(2);
+    }
+
+    selectIdStr = i;
+    prevSelectIdStr = i-1;
+    scanPrice = parseFloat(localStorage.scanPrice);
+}
+
 function scan() {
     var textField = "item-list"+selectIdStr;
     var itemElement = document.getElementById(textField);
@@ -84,6 +111,14 @@ function scan() {
     localStorage.scanPrice = scanPrice;
 
     totalField.innerHTML = scanPrice.toFixed(2);
+
+    var scanItem = {};
+    scanItem.selected = itemElement.value;
+    scanItem.quantity = quantityElement.innerHTML;
+    scanItem.amount = amount;
+    scanItem.price = price.toFixed(2);
+
+    scanStore.push(scanItem);
 
     prevSelectIdStr = selectIdStr;
 
@@ -229,4 +264,5 @@ function addItem() {
 
 function restore () {
     localStorage.fromScan = 1;
+    localStorage.scanStore = JSON.stringify(scanStore);
 }
