@@ -2,10 +2,10 @@
  
 <html>
     <head>
-    <title> Weigh </title>
      <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Self-Checkout Machine</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet"> 
     <link href="../css/custom.css" rel="stylesheet"> 
     
@@ -15,11 +15,15 @@
     	<nav class="navbar navbar-default">
         <div class="container">
             <h1 style="display: inline;" class="col-md-10">Weigh the fresh foods!</h1>
-            <a style="display: inline;" id="help-button" type="button" class="btn btn-danger col-md-2">Help</a>
+            <a style="display: inline;" id="help-button" type="button" class="btn btn-danger col-md-2" onclick="playHelpSound()">Help</a>
         </div>
         </nav>
 
-        <div class="container">          
+        <div class="container col-md-2">
+        <img style="margin-top: 100px;" height="300px" width="200px" src="../images/weigh.jpg">
+        </div>
+
+        <div class="container col-md-10">          
 		  <table class="table table-bordered">
 		    <thead>
 		      <tr>
@@ -122,16 +126,12 @@
 		      </tr>
 		    </tbody>
 		  </table>
-		</div>
-
-		<div class="container">
+		
 			<button class="btn btn-primary col-md-5" style="display: inline;" onclick="addItem()">Add more Item(s)</button>
 			<h4 class="col-md-5" style="text-align: right; display: inline;"><strong>TOTAL PRICE (SGD)</strong></h4>
 			<h4 id="total" class="col-md-2" style="text-align: left; display: inline; color: red;"><strong>-</strong></h4>
-		</div>
-		<br>
+			<br>
 
-		<div class="container">
 			<h3 class="col-md-6"></h3>
 			<a href="scan.html" class="btn btn-success col-md-3" style="display: inline;">Proceed to Scanning</a>
 			<h4 class="col-md-1" style="display: inline; text-align: center;"><i>OR</i></h4>

@@ -48,3 +48,7 @@ function changeNprice(){
 
 }
 
+function playHelpSound () {
+	$('#help-button').append("<audio style='display:none;' autoplay='true' src='../audio/help.mp3'>");
+}
+
