@@ -52,3 +52,13 @@ function playHelpSound () {
 	$('#help-button').append("<audio style='display:none;' autoplay='true' src='../audio/help.mp3'>");
 }
 
+function resetLocalStorage() {
+	console.log(localStorage);
+	localStorage.weighPrice = 0;
+	localStorage.scanPrice = 0;
+	localStorage.fromScan = 0;
+	localStorage.sound = false;
+	localStorage.totalPrice = 0;
+	localStorage.store = [];
+}
+

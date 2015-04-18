@@ -95,6 +95,9 @@ function scan() {
 }
 
 function rescan() {
+    if (undone == 1)
+        prevSelectIdStr--;
+    
     var amountField = "amount"+prevSelectIdStr;
     var element = document.getElementById(amountField);
     var amount = parseFloat(element.innerHTML);
@@ -222,4 +225,8 @@ function addItem() {
 
     for (var i=1; i<items.length+1; i++)
         list.options[i]=new Option(items[i-1].name, i-1);
+}
+
+function restore () {
+    localStorage.fromScan = 1;
 }
